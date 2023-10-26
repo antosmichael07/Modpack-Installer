@@ -90,6 +90,7 @@ int main() {
     system("del /q \%TEMP\%\\mispul_create_survival\\*");
 
     system("rmdir \%TEMP\%\\mispul_create_survival");
+    system("pause");
 
     return 0;
 }
