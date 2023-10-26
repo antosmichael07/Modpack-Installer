@@ -6,7 +6,7 @@ int main() {
 
     char directory[1024] = "";
     char installOption[1024] = "";
-    printf("%s", "Where do you want to install the mods?\n   A - Default minecraft directory ( \%APPDATA\% -> .minecraft )\n   B - This directory\n   C - Custom directory ( It has to be already made )\nExit - Enter anything else to exit\n");
+    printf("%s", "Where do you want to install the mods?\n   A - Default minecraft directory ( \%APPDATA\% -> .minecraft ) ( Recommended for idiots )\n   B - This directory\n   C - Custom directory ( It has to be already made )\nExit - Enter anything else to exit\n");
     scanf("%s", &installOption);
     if (strlen(installOption) > 1) {
         return 0;
@@ -74,6 +74,8 @@ int main() {
     } else {
         return 0;
     }
+
+    printf("\n\n\n");
 
     printf("Installing forge...");
 
