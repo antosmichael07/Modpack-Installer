@@ -24,37 +24,42 @@ int main() {
 
     system("mkdir \%TEMP\%\\mispul_create_survival");
 
-    char cmdCommand1[1024] = "echo cd ";
+    char cmdCommand1[1024] = "mkdir ";
     strcat(cmdCommand1, directory);
-    strcat(cmdCommand1, "\\mods >> ");
-    strcat(cmdCommand1, batFileDestination);
+    strcat(cmdCommand1, "\\mods");
     system(cmdCommand1);
 
-    char cmdCommand2[1024] = "echo del /q * >> ";
+    char cmdCommand2[1024] = "echo cd ";
+    strcat(cmdCommand2, directory);
+    strcat(cmdCommand2, "\\mods >> ");
     strcat(cmdCommand2, batFileDestination);
     system(cmdCommand2);
 
-    char cmdCommand3[1024] = "echo cd \%TEMP\%\\mispul_create_survival >> ";
+    char cmdCommand3[1024] = "echo del /q * >> ";
     strcat(cmdCommand3, batFileDestination);
     system(cmdCommand3);
 
-    char cmdCommand4[1024] = "echo powershell -Command \"& {Invoke-WebRequest -Uri \\\"https://www.dropbox.com/scl/fi/2p7vrs1w7ks6se220z09i/mods.zip?rlkey=kb0284s88wvyfqjvspmf5y0p1\"&\"dl=1\\\" -OutFile \\\"mods.zip\\\"}\" >> ";
+    char cmdCommand4[1024] = "echo cd \%TEMP\%\\mispul_create_survival >> ";
     strcat(cmdCommand4, batFileDestination);
     system(cmdCommand4);
 
-    char cmdCommand5[1024] = "echo tar -xf mods.zip >> ";
+    char cmdCommand5[1024] = "echo powershell -Command \"& {Invoke-WebRequest -Uri \\\"https://www.dropbox.com/scl/fi/2p7vrs1w7ks6se220z09i/mods.zip?rlkey=kb0284s88wvyfqjvspmf5y0p1\"&\"dl=1\\\" -OutFile \\\"mods.zip\\\"}\" >> ";
     strcat(cmdCommand5, batFileDestination);
     system(cmdCommand5);
 
-    char cmdCommand6[1024] = "echo copy \"*.jar\" \"";
-    strcat(cmdCommand6, directory);
-    strcat(cmdCommand6, "\\mods\" >> ");
+    char cmdCommand6[1024] = "echo tar -xf mods.zip >> ";
     strcat(cmdCommand6, batFileDestination);
     system(cmdCommand6);
 
-    char cmdCommand7[1024] = "echo del /q * >> ";
+    char cmdCommand7[1024] = "echo copy \"*.jar\" \"";
+    strcat(cmdCommand7, directory);
+    strcat(cmdCommand7, "\\mods\" >> ");
     strcat(cmdCommand7, batFileDestination);
     system(cmdCommand7);
+
+    char cmdCommand8[1024] = "echo del /q * >> ";
+    strcat(cmdCommand8, batFileDestination);
+    system(cmdCommand8);
 
     system(batFileDestination);
 
