@@ -6,18 +6,16 @@ int main() {
 
     char directory[1024] = "";
     char installOption[1024] = "";
-    printf("%s", "Where do you want to install the mods?\n   A - Default minecraft directory ( \%APPDATA\% -> .minecraft ) ( Recommended for idiots )\n   B - Custom directory ( It has to be already made )\nExit - Enter anything else to exit\n");
+    printf("%s", "Do you want to install the mods?\nY - Yes ( \%APPDATA\% -> .minecraft )\nN - No\n");
     scanf("%s", &installOption);
-    if (strlen(installOption) > 1) {
-        return 0;
-    } else if (installOption[0] == 'A' || installOption[0] == 'a') {
+    if ((installOption[0] == 'Y' || installOption[0] == 'y') && installOption[1] == '\0') {
         strcat(directory, "\%APPDATA\%\\.minecraft");
-    } else if (installOption[0] == 'B' || installOption[0] == 'b') {
-        printf("Enter the directory\n");
+    } else if (installOption[0] == 'a' && installOption[1] == 'd' && installOption[2] == 'v' && installOption[3] == 'a' && installOption[4] == 'n' && installOption[5] == 'c' && installOption[6] == 'e' && installOption[7] == 'd' && installOption[8] == '\0') {
+        printf("Enter a directory:\n");
         scanf("%s", &directory);
     } else {
         return 0;
-    } 
+    }
 
     char batFileDestination[1024] = "\%TEMP\%\\mispul_create_survival\\mod_downloader.bat";
 
@@ -88,12 +86,7 @@ int main() {
     system("echo java -jar forge-1.19.2-43.3.2-installer.jar >> \%TEMP\%\\mispul_create_survival\\forge_downloader.bat");
     system("\%TEMP\%\\mispul_create_survival\\forge_downloader.bat");
     system("del /q \%TEMP\%\\mispul_create_survival\\*");
-
     system("rmdir \%TEMP\%\\mispul_create_survival");
-
-    printf("\n");
-    
-    system("pause");
 
     return 0;
 }
