@@ -6,15 +6,13 @@ int main() {
 
     char directory[1024] = "";
     char installOption[1024] = "";
-    printf("%s", "Where do you want to install the mods?\n   A - Default minecraft directory ( \%APPDATA\% -> .minecraft ) ( Recommended for idiots )\n   B - This directory\n   C - Custom directory ( It has to be already made )\nExit - Enter anything else to exit\n");
+    printf("%s", "Where do you want to install the mods?\n   A - Default minecraft directory ( \%APPDATA\% -> .minecraft ) ( Recommended for idiots )\n   B - Custom directory ( It has to be already made )\nExit - Enter anything else to exit\n");
     scanf("%s", &installOption);
     if (strlen(installOption) > 1) {
         return 0;
     } else if (installOption[0] == 'A' || installOption[0] == 'a') {
         strcat(directory, "\%APPDATA\%\\.minecraft");
     } else if (installOption[0] == 'B' || installOption[0] == 'b') {
-        directory[0] = ' ';
-    } else if (installOption[0] == 'C' || installOption[0] == 'c') {
         scanf("%s", &directory);
     } else {
         return 0;
