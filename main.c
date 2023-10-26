@@ -13,6 +13,7 @@ int main() {
     } else if (installOption[0] == 'A' || installOption[0] == 'a') {
         strcat(directory, "\%APPDATA\%\\.minecraft");
     } else if (installOption[0] == 'B' || installOption[0] == 'b') {
+        printf("Enter the directory\n");
         scanf("%s", &directory);
     } else {
         return 0;
