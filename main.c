@@ -38,7 +38,7 @@ int main() {
     strcat(cmdCommand3, batFileDestination);
     system(cmdCommand3);
 
-    char cmdCommand4[1024] = "echo powershell -Command \"& {Invoke-WebRequest -Uri \\\"https://www.dropbox.com/scl/fi/mkldyx7lv90scoowxd839/mods.zip?rlkey=8hd42awzi5szq96aovb8ocu6r\"&\"dl=1\\\" -OutFile \\\"mods.zip\\\"}\" >> ";
+    char cmdCommand4[1024] = "echo powershell -Command \"& {Invoke-WebRequest -Uri \\\"https://www.dropbox.com/scl/fi/gq0m7lqhb3rybl3hv52ji/mods.zip?rlkey=skdqyermw75o3u73ngkosi7c9\"&\"dl=1\\\" -OutFile \\\"mods.zip\\\"}\" >> ";
     strcat(cmdCommand4, batFileDestination);
     system(cmdCommand4);
 
@@ -84,8 +84,6 @@ int main() {
     system("echo java -jar forge-1.19.2-43.3.2-installer.jar >> \%TEMP\%\\mispul_create_survival\\forge_downloader.bat");
     system("\%TEMP\%\\mispul_create_survival\\forge_downloader.bat");
     system("del /q \%TEMP\%\\mispul_create_survival\\*");
-
-    printf("\n\n\n");
 
     system("rmdir \%TEMP\%\\mispul_create_survival");
 
