@@ -40,7 +40,7 @@ int main() {
     strcat(cmdCommand4, batFileDestination);
     system(cmdCommand4);
 
-    char cmdCommand5[1024] = "echo powershell -Command \"& {Invoke-WebRequest -Uri \\\"https://www.dropbox.com/scl/fi/wfswjtfuj2tlalebf4qyc/mods.zip?rlkey=go53stwd75ujti66qejtsh4g1\"&\"dl=1\\\" -OutFile \\\"mods.zip\\\"}\" >> ";
+    char cmdCommand5[1024] = "echo powershell -Command \"& {Invoke-WebRequest -Uri \\\"https://www.dropbox.com/scl/fi/h1f2vktwtcu9yif9rw1o4/mods.zip?rlkey=fp4f1r4x4ek9uzicvr12z8ajx\"&\"dl=1\\\" -OutFile \\\"mods.zip\\\"}\" >> ";
     strcat(cmdCommand5, batFileDestination);
     system(cmdCommand5);
 
