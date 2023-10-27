@@ -6,9 +6,11 @@ The custom directory has to be something like this "C:\example", it cannot be th
 ### How to download and install
 
 Click on the main.exe <br>
+<br>
 <img src="img1.png"/> <br>
 
-Then click on the three dots and click download
+Then click on the three dots and download
+<br>
 <img src="img2.png"/> <br>
 
 After it's downloaded, open it and install.
