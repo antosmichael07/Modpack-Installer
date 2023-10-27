@@ -1,7 +1,7 @@
 # Modpack-Installer
 
-Type "advanced" at the start for a custom directory. <br>
-The custom directory has to be something like this "C:\example", it cannot be this "C:\example\\" <br>
+If you would like to you could type "advanced" at the start for a custom directory, but it's not recommended for someone who doesn't know how mods work. <br>
+The custom directory has to be something like this "C:\example", it cannot be this "C:\example\\" neither this ".\example" <br>
 
 ## How to download and install
 
